@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        counter-reset: game; /* counter-reset: Crea o reinicia un contador. */
+      }
+      /* checked: Cuando este marcado el checkbox realiza lo siguiente */
+      input:checked {
+        counter-increment: game; /* counter-increment: Incrementa un valor del contador existente. */
+      }
+      /* ::after: Añade un contador despues del Score: */
+      .total-count::after {
+        /* content: Inserta el contenido generado (debe usarse con un pseudoelemento). */
+        content: counter(game); /* counter(): Función que agrega el valor de un contador a un elemento. */
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <input type="checkbox" />
+        <div class="shield"></div>
+      </li>
+      <li>
+        <input type="checkbox" />
+        <div class="shield"></div>
+      </li>
+      <li>
+        <input type="checkbox" />
+        <div class="shield"></div>
+      </li>
+      <li>
+        <input type="checkbox" />
+        <div class="shield"></div>
+      </li>
+      <li>
+        <input type="checkbox" />
+        <div class="shield"></div>
+      </li>
+      <li>
+        <input type="checkbox" />
+        <div class="shield"></div>
+      </li>
+      <li>
+        <input type="checkbox" />
+        <div class="shield"></div>
+      </li>
+      <li>
+        <input type="checkbox" />
+        <div class="shield"></div>
+      </li>
+    </ul>
+    <h3 class="total-count">Score:</h3>
+  </body>
+</html>
